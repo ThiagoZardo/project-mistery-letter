@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.newspaper{
+    background-color: antiquewhite;
+    font-family: 'Times New Roman';
+    font-weight: 700;
+}
