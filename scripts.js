@@ -33,28 +33,26 @@ function criarCarta(){
         for(let p = spanDinamico.length-1; p >= 0; p-=1){
             spanDinamico[p].remove();
         }
+
+         //Seleciona classes aleatóriamente
+         window.onload = function (min, max){
+            return Math.floor(Math.random() * (max - min));
+        }
         
         //Cria novos span colocando uma letra em cada
         for(let i = 0; i < caixaTexto.value.split(" ").length; i+=1){
             let span = document.createElement("span");
             cartaGerada.appendChild(span)[i];
             span.innerHTML = caixaTexto.value.split(" ")[i];
+            //Nomes aleatórios de classes
+            for(let i = 0; i < 4; i+=1){
+                span.className = arrayClasses[onload(i, arrayClasses.length)];  
+            }
         }  
 
-        //Seleciona classes aleatóriamente
-        window.onload = function (min, max){
-            return Math.floor(Math.random() * (max - min));
-        }
-        
-        for(let i = 0; i < 4; i+=1){
-            spanDinamico.className = arrayClasses[onload(0, arrayClasses.length)];
-            
-        }
-        
-        
+       
         
     };
-    
 };
 
 
